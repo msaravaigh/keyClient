@@ -77,8 +77,10 @@ public class LoginController {
 				System.out.println(" user.getName() = "+ responseObj.getOutObj().get("userfullname"));
 				request.getSession().setAttribute("userfullname", responseObj.getOutObj().get("userfullname"));				
 			}else{
+				request.getSession().setAttribute("token", "");
 				mv= new ModelAndView("login");
 				mv.addObject("title", "Login");
+				mv.addObject("message", "Login failed");
 			}
 			mv.addObject("httpstatus", successCode);
 			

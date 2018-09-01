@@ -1,43 +1,14 @@
-<%@ page language="java" contentType="text/html; charset=ISO-8859-1"
-	pageEncoding="ISO-8859-1"%>
-<%@taglib prefix="spring" uri="http://www.springframework.org/tags"%>
+<%@ page language="java" contentType="text/html; charset=US-ASCII"
+    pageEncoding="US-ASCII"%>
+<%@taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
+<%@taglib prefix="kendo" uri="http://www.kendoui.com/jsp/tags"%>
+<%@taglib prefix="shared" tagdir="/WEB-INF/tags"%>
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html>
 
-<spring:url var="css" value="/resources/css" />
-<spring:url var="js" value="/resources/js" />
-
-<%@taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core"%>	
-<c:set var="contextRoot" value="${pageContext.request.contextPath}" />
-<!DOCTYPE html>
-<html lang="en">
-
-<head>
-
-<meta charset="utf-8">
-<meta http-equiv="X-UA-Compatible" content="IE=edge">
-<meta name="viewport" content="width=device-width, initial-scale=1">
-<meta name="description" content="">
-<meta name="author" content="">
-
-<title>Key Client - ${title}</title>
-
-<!-- Bootstrap Core CSS -->
-<link href="css/bootstrap.min.css" rel="stylesheet">
-
-<!-- Bootstrap Readable Theme -->
-<link href="css/bootstrap-readable-theme.css" rel="stylesheet">
-<link href="css/myapp.css" rel="stylesheet">
-
-
-
-<script>
-	window.menu = '${title}';
-	
-	window.contextRoot = '${contextRoot}'
-	
-</script>
-</head>
-
+<shared:header></shared:header>
 <body>
+<shared:menu></shared:menu>
 
 	<div class="wrapper">
 
@@ -50,7 +21,6 @@
 			</div>
 		</nav>		
 -->
-<%@include file="./common/header.jsp" %>
 		<!-- Page Content -->
 
 		<div class="content">
@@ -99,20 +69,16 @@
            <input type="password" name="password" id="password" class="form-control"/>
           </div>
          </div>
-         <div class="form-group">
-          <div class="col-md-offset-4 col-md-8">
+         <div class="form-group">        
+          <div class="col-md-8">
            <input type="hidden"  name="${_csrf.parameterName}"   value="${_csrf.token}"/>
-           <input type="submit" value="Login" class="btn btn-primary"/>
+           <input type="submit" value="Login" class="col-md-4 button"/>
           </div>
          </div>
         </form>
        
        </div>
-       <div class="panel-footer">
-       	<div class="text-right">
-       		New User - <a href="/register">Register Here</a>
-       	</div>
-       </div>
+      
       
       </div> 
     
@@ -121,23 +87,8 @@
     </div>    
    
    </div>
-
 			
 		</div>
-
-
-		<!-- Footer comes here -->
-		<%@include file="./common/footer.jsp"%>
-
-		<!-- jQuery -->
-		<script src="js/jquery.js"></script>
-
-		
-
-		<!-- Bootstrap Core JavaScript -->
-		<script src="js/bootstrap.min.js"></script>
-		
-		
 
 	</div>
 

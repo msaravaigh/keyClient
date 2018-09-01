@@ -47,8 +47,28 @@
     <groupId>javax.servlet</groupId>
     <artifactId>jstl</artifactId>    
 </dependency>
+<!-- https://mvnrepository.com/artifact/org.webjars/kendo-ui-core -->
+<dependency>
+    <groupId>org.webjars</groupId>
+    <artifactId>kendo-ui-core</artifactId>
+    <version>2014.2.716</version>
+</dependency>
 
-		
+<!-- 
+<dependency>
+    <groupId>com.googlecode.wicket-jquery-ui</groupId>
+    <artifactId>wicket-kendo-ui</artifactId>
+    <version>8.0.0</version>
+    <scope>provided</scope>
+</dependency>
+
+<dependency>
+    <groupId>com.googlecode.wicket-jquery-ui</groupId>
+    <artifactId>wicket-kendo-ui-theme-metro</artifactId>
+    <version>8.0.0</version>
+</dependency>
+
+ -->		
 	</dependencies>
 
 	<build>
