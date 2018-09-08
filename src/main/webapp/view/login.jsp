@@ -31,8 +31,7 @@
 			</div>
 		</c:if>
 	       
-	    <div class="row">
-	     
+	    <div class="row">	     
 	     <div class="col-md-offset-3 col-md-6">
 	      
 	      <div class="panel panel-primary">
