@@ -68,7 +68,6 @@ public class LoginController {
 		 HttpHeaders requestHeaders = new HttpHeaders();
 			requestHeaders.setContentType(MediaType.APPLICATION_JSON);
 			requestHeaders.set("Authorization", authorizationHeaderValue);
-			
 			Response responseObj = authenticate(user,  requestHeaders);
 			ModelAndView mv =null;
 			if(responseObj.getStatusCode() ==200){
@@ -99,10 +98,11 @@ public class LoginController {
 			 responseObj.setOutObj((Map<String, String>) response.getBody());
 			 responseObj.setStatusCode(response.getStatusCodeValue());
 		}catch(HttpClientErrorException he){
+			he.printStackTrace();
 			LOGGER.debug(" Http error - "+he.toString());
 			responseObj.setStatusCode(he.getRawStatusCode());
 		} catch (Exception e) {
-			LOGGER.error(""+ e.getStackTrace());
+			e.printStackTrace();
 		}
 		return responseObj;
 	}
